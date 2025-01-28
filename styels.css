@@ -1,0 +1,175 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Definindo a fonte da página */
+    margin: 0;
+    padding: 0
+}
+
+
+header {
+    
+    padding: 30px ; 
+    display: flex; 
+    justify-content: center;  
+}
+
+
+nav {
+    display: flex; /* Usando flexbox para organizar logo e itens de navegação */
+    justify-content: space-between; /* Espaça a logo e a navegação ao máximo */
+    width: 70%; 
+}
+
+.navegacao {
+    display: flex; /* Exibe os itens de navegação horizontalmente */
+    text-align: center;
+    justify-content: center;
+    list-style-type: none; /* Remove os marcadores das listas */
+    padding: 0; /* Remove o padding padrão */
+    margin: 15px; /* Remove a margem da lista */
+gap: 10px;
+}
+
+.navegacao li {
+    margin-left: 30px; /* Espaçamento entre os itens de navegação */
+}
+
+.navegacao li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: black; /* Cor do texto dos links */
+    font-size: 18px; /* Tamanho da fonte dos links */
+    font-weight: bold; /* Deixa o texto dos links em negrito */
+}
+
+.logo {
+    display: flex; /* Flexbox para a logo e o ícone */
+    color:black; /* Cor do texto da logo */
+    font-size: 40px; /* Tamanho da fonte da logo */
+    text-decoration: none; /* Remove o sublinhado do link */
+
+}
+
+.logo i {
+    margin-right: 30px; /* Espaçamento entre o ícone e o texto da logo */
+}
+
+article{
+   display: flex;
+   grid-template-columns: 1fr 1fr ;
+    background-image: url(/assets/img/subtle-prism.svg);
+    
+}
+.textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh; /* Para garantir que ocupe a altura total da tela */
+gap: 30px;
+    font-size: 20px;
+}
+
+.texto1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 40px;
+}
+
+
+.conteiner {
+    background-color: white;
+    padding:0px;
+    
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 95vh;
+    text-align: center;
+}
+
+/* Título do cadastro */
+.cadastro h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Estilizando os campos de entrada */
+.box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.box label {
+    display: block;
+    margin-bottom: 5px;
+   
+}
+
+.box input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.box input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+
+button {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+@media screen and (max-width: 500px) {
+    /* Mudando o layout para telas pequenas */
+    article {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .conteiner {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        text-align: left;
+    }
+
+    /* Ajustando os títulos */
+    .texto1 {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /* Ajustando o formulário */
+    .box input {
+        font-size: 16px;
+    }
+
+    .box button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
